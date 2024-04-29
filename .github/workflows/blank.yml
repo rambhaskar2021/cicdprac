@@ -30,8 +30,12 @@ jobs:
       uses: azure/arm-deploy@v1
       with:
         resource-group: rg_uat_git
-        template: adf_publish/*.json
-        parameters: adf_publish/*.parameters.json
+        template: |
+          adf_publish/*.json
+          adfdevgit/*.json
+        parameters: |
+          adf_publish/*.parameters.json
+          adfdevgit/*.parameters.json
         factory-name: adfuatgit
         subscription-id: 7da27902-e7a0-43c8-8477-ec270e869815
 
