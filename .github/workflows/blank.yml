@@ -15,6 +15,9 @@ jobs:
       uses: azure/CLI@v1
       with:
         azcliversion: 'latest'
+        inlineScript: |
+          echo '${{ secrets.azure_credentials }}' > ~/.azure/credentials
+          az account set --subscription 7da27902-e7a0-43c8-8477-ec270e869815
 
     - name: Set up Azure Storage account access
       uses: azure/CLI@v1
