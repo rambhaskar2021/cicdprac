@@ -10,21 +10,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-      with:
-        node-version: '20'
 
     - name: Set up Azure credentials
       uses: azure/CLI@v1
       with:
-        node-version: '20'
-        inlineScript: |
-          echo '${{ secrets.azure_credentials }}' > ~/.azure/credentials
-          az account set --subscription 7da27902-e7a0-43c8-8477-ec270e869815
+        azcliversion: 'latest'
 
     - name: Set up Azure Storage account access
       uses: azure/CLI@v1
       with:
-        node-version: '20'
+        azcliversion: 'latest'
         inlineScript: |
           echo '${{ secrets.AZURE_STORAGE_KEY }}' > ~/.azure/storage_access_key
 
