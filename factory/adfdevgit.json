@@ -1,0 +1,9 @@
+{
+	"name": "adfdevgit",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0e25b6a7-b820-45f6-b62b-fc89d3c6452b",
+		"tenantId": "61bc7746-4b44-465d-95ba-140e857d86a9"
+	}
+}
